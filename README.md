@@ -7,6 +7,6 @@
 ### Routes
 
 ### Models
--create a user model
+-create a person model
 
 ### ERD
