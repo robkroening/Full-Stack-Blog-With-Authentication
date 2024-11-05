@@ -11,8 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // database connection
+mongoose.connect('mongodb://localhost:27017/fullstackblog_db');
 
 // routers
+const peopleRouter = require('./routers/peopleRouter');
+app.use('/people', peopleRouter);
 
 // catch all error handler
 
