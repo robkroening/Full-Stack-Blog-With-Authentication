@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
 // create a new person
 router.post('/', async (req, res) => {
     try {
-        const person = Person.create(req.body);
+        const person = await Person.create(req.body);
         res.status(200).json(person);
     } catch (error) {
         res.status(200).json(error);
